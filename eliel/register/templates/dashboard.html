@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <section style="height: 100vh">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div
+        class="box"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="square" style="--i: 0"></div>
+        <div class="square" style="--i: 1"></div>
+        <div class="square" style="--i: 2"></div>
+        <div class="square" style="--i: 3"></div>
+        <div class="square" style="--i: 4"></div>
+        <div class="container">
+          <div class="container container2">
+            <div class="from">
+              <div class="user-list">
+                <div class="" style="padding-bottom: 50px">
+                  <h2 class="">Lista de usuarios registrados</h2>
+                </div>
+                <table class="user-table">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Correo Electrónico</th>
+                      <!-- Agregamos una nueva columna -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for user in registered_users %}
+                    <tr>
+                      <td>{{ user.nombre }}</td>
+                      <td>{{ user.correo_electronico }}</td>
+                      <!-- Mostramos el correo electrónico -->
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

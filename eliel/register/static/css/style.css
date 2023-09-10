@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Estilos para la lista de usuarios registrados en formato de celdas de Excel */
+.container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+.user-list {
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle; /* Centra verticalmente el contenido en las celdas */
+}
+
+.user-table th {
+  background-color: #f0f0f0;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.user-table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+/* ... (los estilos anteriores se mantienen) ... */
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+  top: -350;
+  width: 600px;
+  height: 600px;
+  background-color: #01cd0e;
+}
+
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: #0128d6;
+}
+
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+  background-color: #00d2ff;
+}
+
+section .box {
+  position: relative;
+}
+
+section .box .square {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  animation: animate 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translate(-30px);
+  }
+
+  50% {
+    transform: translate(30px);
+  }
+}
+
+section .box .square:nth-child(1) {
+  top: -50px;
+  right: -60px;
+  width: 100px;
+  height: 100px;
+}
+
+section .box .square:nth-child(2) {
+  top: 150px;
+  left: -80px;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+section .box .square:nth-child(3) {
+  bottom: 50px;
+  right: -60px;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+section .box .square:nth-child(4) {
+  bottom: -80px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+}
+
+section .box .square:nth-child(5) {
+  top: -80px;
+  left: 140px;
+  width: 60px;
+  height: 60px;
+}
+
+section .container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+
+section .container form {
+  position: relative;
+  padding: 40px;
+}
+
+section .container .from h2 {
+  position: relative;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-left: 40px;
+}
+
+section .container .from h2::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: #fff;
+}
+
+section .container .from .inputBox {
+  width: 100%;
+  margin-top: 10px;
+}
+
+section .container .from .inputBox input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+section .container .from .inputBox input::placeholder {
+  color: #fff;
+}
+
+section .container .from .inputBox input[type="submit"] {
+  background: #fff;
+  color: #666;
+  max-width: auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+section .container .from .forget {
+  margin-top: 5px;
+  color: #fff;
+}
+
+section .container form .forget a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+  transform: rotate(-30deg) skew(25deg);
+  background: #ccc;
+}
+
+ul li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 0.5s;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px !important;
+}
+
+ul li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+
+ul li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+
+ul li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+
+ul li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+
+ul li:hover span:nth-child(1) {
+  transform: translate(0px, -0px);
+  opacity: 0.2;
+}
+
+ul li:nth-child(1) span {
+  background: #4267b2;
+}
+
+ul li:nth-child(2) span {
+  background: #1da1f2;
+}
+
+ul li:nth-child(3) span {
+  background: #128c7e;
+}
+
+ul li:nth-child(4) span {
+  background: #333;
+}
+
+ul li:nth-child(5) span {
+  background: #e1306c;
+}
