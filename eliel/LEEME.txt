@@ -1,0 +1,1 @@
+1.abrir iniciar-proyecto.bat para instalar el python, los paquetes, correr el servidor de django y despues abrira este link para ver la pagina: http://127.0.0.1:8000
